@@ -42,11 +42,13 @@ a. Move
 b. Combination of t he moves
 ( See player input section for more details ) 
 
-  * After Player 1 has given the input, the program asks for input from
+* After Player 1 has given the input, the program asks for input from
 Player 2 in the similar way.
-  * After each turn, the program displays the current status of hands for
+
+* After each turn, the program displays the current status of hands for
 both players.
-  * The game ends when one of t he players has dead hands. Display
+
+* The game ends when one of t he players has dead hands. Display
 which player won t he game.
 
 
