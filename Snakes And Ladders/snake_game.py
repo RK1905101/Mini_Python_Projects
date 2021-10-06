@@ -40,11 +40,14 @@ while (game == 0):
 	if (mode1 == 1):
 		num = int(input())
 		p1 = p1 + num
-		if (p1 >= 100):
+		if (p1 == 100):
 			print("\n### " + pname1 + " Wins!! ###\n")
 			game = 1
-		else:
+		elif (p1 < 100):
 			print("Your new position is " + str(p1))
+		else:
+			p1 = p1 - num
+			print("Rolled value overshoots goal, position will remain unchanged at " + str(p1))
 
 	elif (mode1 == 0):
 		print("Roll or Quit: ")
@@ -54,11 +57,14 @@ while (game == 0):
 			num = random.randint(1, 6)
 			print("You got a " + str(num))
 			p1 = p1 + num
-			if (p1 >= 100):
+			if (p1 == 100):
 				print("\n### " + pname1 + " Wins!! ###\n")
 				game = 1
-			else:
+			elif (p1 < 100):
 				print("Your new position is " + str(p1))
+			else:
+				p1 = p1 - num
+				print("Rolled value overshoots goal, position will remain unchanged at " + str(p1))
 
 		elif (x == "quit"):
 			print("\n### " + pname2 + " Wins!! ###\n")
