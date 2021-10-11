@@ -34,12 +34,12 @@ def task_user2():
 		print("Your Balance : " , balance_user2)
 	elif task == 2:
 		amount = int(input("Enter the amount you want to Withdraw : "))
-		balance_user1 = balance_user2 - amount
+		balance_user2 = balance_user2 - amount
 		print("You have Successfully withdrawn " , amount)
 		print("Your Balance : " , balance_user2)
 	elif task == 3:
 		depo = int(input("Enter the amount you want to Deposit : "))
-		balance_user1 = balance_user2 + depo
+		balance_user2 = balance_user2 + depo
 		print("You have Successfully Deposited " , depo)
 		print("Your Balance : " , balance_user2)
 
@@ -51,12 +51,12 @@ def task_user3():
 		print("Your Balance : " , balance_user3)
 	elif task == 2:
 		amount = int(input("Enter the amount you want to Withdraw : "))
-		balance_user1 = balance_user3 - amount
+		balance_user3 = balance_user3 - amount
 		print("You have Successfully withdrawn " , amount)
 		print("Your Balance : " , balance_user3)
 	elif task == 3:
 		depo = int(input("Enter the amount you want to Deposit : "))
-		balance_user1 = balance_user3 + depo
+		balance_user3 = balance_user3 + depo
 		print("You have Successfully Deposited " , depo)
 		print("Your Balance : " , balance_user3)
 
