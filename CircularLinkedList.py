@@ -55,7 +55,7 @@ class CircularLinkedList:
             while index != target:
                 prev = carrier
                 carrier = carrier.next_node
-                index = index + 1
+                index += 1
             prev.next_node = new_node
             new_node.next_node = carrier
 
@@ -69,7 +69,7 @@ class CircularLinkedList:
             while index != target:
                 prev = carrier
                 carrier = carrier.next_node
-                index = index + 1
+                index += 1
             prev.next_node = carrier.next_node
 
     def show_list(self):

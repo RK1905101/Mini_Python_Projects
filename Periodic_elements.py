@@ -7,31 +7,30 @@ class Elements:
         self.author = 'Akshat Mishra'
         self.program = 'Periodic Elements'
     def Res(self, bul, test):
-        if not self.elements in elements:
+        if self.elements not in elements:
             return (
                 f'"{self.elements}" does not exists as a Chemical Element\n\nEnter something like Hydrogen etc....')
-        else:
-            a = elements[self.elements]
-            return (
-                "{}{}{}\n\n{} ELEMENT   : {}\n{} APPEARANCE: {}\n{} SYMBOL    : {}\n{} NUMBER    : {}\n{} PERIOD    : {}\n{} PHASE     : {}\n{} ATOMIC MASS: {}\n{} BOILING pt: {}\n{} MELTING Pt: {}\n{} CATEGORY  : {}\n{} DENSITY    : {}\n{} MOLAR HEAT  : {}\n{} CONFIGURATION : {}\n{} AFFINITY    : {}\n{} ELECTRONEGATIVITY : {}\n{} IONIZATION e  : {}\n{} Xpos    : {}\n{} Ypos    : {}\n{} SHELLS   : {}\n{} DISCOVERED BY: {}\n{} NAMED BY  : {}\n\n\n{} {}\n\n{}".format(
-                test,'PERIODIC ELEMENTS'.center(45),test,
-                bul,self.elements,bul,a['appearance'],
-                bul,a['symbol'],bul,a['number'],bul,
-                a['period'],bul,a['phase'],bul,
-                a['atomic_mass'],bul,a['boil'],bul,
-                a['melt'],bul,a['category'], bul,
-                a['density'],bul,a['molar_heat'],
-                bul,a['electron_configuration'],
-                bul,a['electron_affinity'],bul,
-                a['electronegativity_pauling'],
-                bul,a['ionization_energies'],
-                bul, a['xpos'],bul,a['ypos'],
-                bul,a['shells'],
-                bul,a['discovered_by'],
-                bul,a['named_by'],
-                bul,a['summary'],
-                '"Programmed by Akshat Mishra"'.center(10)
-                ))
+        a = elements[self.elements]
+        return (
+            "{}{}{}\n\n{} ELEMENT   : {}\n{} APPEARANCE: {}\n{} SYMBOL    : {}\n{} NUMBER    : {}\n{} PERIOD    : {}\n{} PHASE     : {}\n{} ATOMIC MASS: {}\n{} BOILING pt: {}\n{} MELTING Pt: {}\n{} CATEGORY  : {}\n{} DENSITY    : {}\n{} MOLAR HEAT  : {}\n{} CONFIGURATION : {}\n{} AFFINITY    : {}\n{} ELECTRONEGATIVITY : {}\n{} IONIZATION e  : {}\n{} Xpos    : {}\n{} Ypos    : {}\n{} SHELLS   : {}\n{} DISCOVERED BY: {}\n{} NAMED BY  : {}\n\n\n{} {}\n\n{}".format(
+            test,'PERIODIC ELEMENTS'.center(45),test,
+            bul,self.elements,bul,a['appearance'],
+            bul,a['symbol'],bul,a['number'],bul,
+            a['period'],bul,a['phase'],bul,
+            a['atomic_mass'],bul,a['boil'],bul,
+            a['melt'],bul,a['category'], bul,
+            a['density'],bul,a['molar_heat'],
+            bul,a['electron_configuration'],
+            bul,a['electron_affinity'],bul,
+            a['electronegativity_pauling'],
+            bul,a['ionization_energies'],
+            bul, a['xpos'],bul,a['ypos'],
+            bul,a['shells'],
+            bul,a['discovered_by'],
+            bul,a['named_by'],
+            bul,a['summary'],
+            '"Programmed by Akshat Mishra"'.center(10)
+            ))
 null = ''
 elements = {
             "Hydrogen":{
