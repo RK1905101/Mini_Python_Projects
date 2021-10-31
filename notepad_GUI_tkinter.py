@@ -21,14 +21,13 @@ def openFile():
     else:
         root.title(os.path.basename(file) + " - Notepad")
         TextArea.delete(1.0, END)
-        f = open(file, "r")
-        TextArea.insert(1.0, f.read())
-        f.close()
+        with open(file, "r") as f:
+            TextArea.insert(1.0, f.read())
 
 
 def saveFile():
     global file
-    if file == None:
+    if file is None:
         file = asksaveasfilename(initialfile = 'Untitled.txt', defaultextension=".txt",
                            filetypes=[("All Files", "*.*"),
                                      ("Text Documents", "*.txt")])
@@ -36,18 +35,13 @@ def saveFile():
             file = None
 
         else:
-            #Save as a new file
-            f = open(file, "w")
-            f.write(TextArea.get(1.0, END))
-            f.close()
-
+            with open(file, "w") as f:
+                f.write(TextArea.get(1.0, END))
             root.title(os.path.basename(file) + " - Notepad")
             print("File Saved")
     else:
-        # Save the file
-        f = open(file, "w")
-        f.write(TextArea.get(1.0, END))
-        f.close()
+        with open(file, "w") as f:
+            f.write(TextArea.get(1.0, END))
 
 
 def quitApp():
