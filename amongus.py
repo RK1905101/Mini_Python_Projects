@@ -1,5 +1,7 @@
 import turtle
 '''AMONG US CHARACTER DESIGN USING TURTLE GRAPHICS'''
+
+#Initialise the Turtle Class
 win = turtle.getscreen()
 impostor = turtle.Turtle()
 win.setup(width=600, height=600)
