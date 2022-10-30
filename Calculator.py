@@ -1,15 +1,46 @@
-a=int(input("Enter 1st number :"))
-b=int(input("Enter 2nd number :"))
-c=input("Enter operator :")
-if c=='+':
-    res=a+b 
-elif c=='-':
-    res = a-b
-elif c=='*':
-    res = a*b
-elif c=='/':
-    res = a/b
-else:
-    res = "try again with correct input"
+def add(x, y):
+    return x + y
 
-print(a,c,b ,":",res)
+def subtract(x, y):
+    return x - y
+
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    return x / y
+
+
+print("Select operation.")
+print("1.Addition")
+print("2.Subtraction")
+print("3.Multiplication")
+print("4.Divsion")
+
+while True:
+
+    choice = input("Please choice(1/2/3/4) and Enter: ")
+
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        
+        next_calculation = input("Let's do next calculation? (yes/no): ")
+        if next_calculation == "no":
+          break
+    
+    else:
+        print("Invalid Input")
