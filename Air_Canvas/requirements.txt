@@ -1,0 +1,8 @@
+# Run this command to install 
+# pip install -r requirements.txt
+
+
+opencv-python
+mediapipe
+numpy
+
