@@ -1,0 +1,2 @@
+python nltkdownload.py
+pause
