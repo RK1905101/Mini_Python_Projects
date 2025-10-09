@@ -1,0 +1,2 @@
+spotipy==2.23.0
+ytmusicapi==0.21.0
