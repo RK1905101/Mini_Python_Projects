@@ -112,10 +112,14 @@ class Tetris:
             for j in range(4):
                 if i * 4 + j in self.figure.image():
                     self.field[i + self.figure.y][j + self.figure.x] = self.figure.color
+
         self.break_lines()
-        self.new_figure()
-        if self.intersects():
+        
+        if self.figure.y <= 0:
             self.state = "gameover"
+        else:
+            self.new_figure()
+
 
     def go_side(self, dx):
         old_x = self.figure.x
@@ -158,7 +162,7 @@ counter = 0
 pressing_down = False
 
 while not done:
-    if game.figure is None:
+    if game.state == "start" and game.figure is None:
         game.new_figure()
     counter += 1
     if counter > 100000:
@@ -172,18 +176,20 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_z:
-                game.lrotate()
-            if event.key == pygame.K_x:
-                game.rrotate()
-            if event.key == pygame.K_DOWN:
-                pressing_down = True
-            if event.key == pygame.K_LEFT:
-                game.go_side(-1)
-            if event.key == pygame.K_RIGHT:
-                game.go_side(1)
-            if event.key == pygame.K_SPACE:
-                game.go_space()
+            if game.state == "start":
+                if event.key == pygame.K_z:
+                    game.lrotate()
+                if event.key == pygame.K_x:
+                    game.rrotate()
+                if event.key == pygame.K_DOWN:
+                    pressing_down = True
+                if event.key == pygame.K_LEFT:
+                    game.go_side(-1)
+                if event.key == pygame.K_RIGHT:
+                    game.go_side(1)
+                if event.key == pygame.K_SPACE:
+                    game.go_space()
+            # Always allow restart
             if event.key == pygame.K_ESCAPE:
                 game.__init__(20, 10)
 
@@ -220,6 +226,7 @@ while not done:
     if game.state == "gameover":
         screen.blit(text_game_over, [20, 200])
         screen.blit(text_game_over1, [25, 265])
+        game.figure = None
 
     pygame.display.flip()
     clock.tick(fps)
