@@ -51,7 +51,8 @@ The program uses a CSV file to store plant data. This file contains three column
 ## 🌟 Additional Notes
 - ✅ The program is beginner-friendly and runs directly with the CSV file included.  
 - ✅ You can add new plants at any time, and the CSV will update automatically.  
-- ✅ Make sure the CSV file (`plants.csv`) stays in the same folder as `main.py` for proper functionality.  
+- ✅ Make sure the CSV file (`plants.csv`) stays in the same folder as `main.py` for proper functionality.
+- ✅ Added ability to log plant growth and notes for each plant. 
 
 ---
 
