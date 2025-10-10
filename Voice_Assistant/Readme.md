@@ -18,6 +18,7 @@ This project is perfect for learning **speech recognition, text-to-speech, APIs,
   * Uses `speech_recognition` to understand commands.
   * Responds using **Google Text-to-Speech (gTTS)** for a natural-sounding voice.
 
+
 🌐 **Web Automation**
 
   * Opens popular websites:
@@ -26,15 +27,18 @@ This project is perfect for learning **speech recognition, text-to-speech, APIs,
     * `open youtube` → Opens YouTube
     * `open github` → Opens GitHub
 
+
 🎶 **Music Player**
 
   * `play <song name>` → Plays songs stored in `musicLibrary.py`.
   * Case-insensitive matching for song names.
 
+
 📰 **News Headlines**
 
   * Fetches **BBC News** top headlines using [NewsAPI](https://newsapi.org/).
   * Reads them aloud with a small gap between each headline.
+
 
 🔊 **Audio Feedback**
 
@@ -48,6 +52,7 @@ git clone https://github.com/RameezHiro/Project-Jarvis
 <br>
 cd Project-Jarvis
 
+
 ## 2️⃣ Install Dependencies
 
 Make sure you have **Python 3.8+** installed. Then install the required libraries:
@@ -55,6 +60,7 @@ Make sure you have **Python 3.8+** installed. Then install the required librarie
 pip install speechrecognition gtts playsound requests
 
 > **Windows Users:** `winsound` is built-in and does not require installation.
+
 
 ## 3️⃣ Get Your NewsAPI Key
 
@@ -64,6 +70,7 @@ pip install speechrecognition gtts playsound requests
 
 python
 newsapi = "your_api_key_here"
+
 
 ## 4️⃣ Configure Your Music Library
 
@@ -94,6 +101,7 @@ python jarvis.py
 
 Jarvis will execute the task and respond with voice output.
 
+
 ## 📂 Project Structure
 
 Voice-assistant/
@@ -104,15 +112,6 @@ Voice-assistant/
 <br>
 ├── README.md           # Documentation
 
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-* Fork the repository
-* Create a feature branch (`git checkout -b feature-name`)
-* Commit your changes
-* Open a Pull Request
 
 ## 📜 License
 

@@ -38,7 +38,7 @@ def processCommand(command):
         speak("Opening YouTube")
         webbrowser.open("https://www.youtube.com")
 
-    elif "open github" in command:
+    elif "open github " in command:
         speak("Opening GitHub")
         webbrowser.open("https://www.github.com")
 
