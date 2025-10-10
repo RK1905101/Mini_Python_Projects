@@ -8,10 +8,11 @@ print("🌷🌸🌿 Welcome to the Virtual Plant Watering Tracker & Reminder! �
 print("-------------------------------------------------------------")
 print("🌞 Let's keep your plants happy, hydrated, and blooming! 💧🪴\n")
 
-
 # 📊 Read the CSV
 data = pd.read_csv("plants.csv")
 data['last_watered'] = pd.to_datetime(data['last_watered'])
+if 'notes' not in data.columns:
+    data['notes'] = ""
 
 # 🪴 Helper functions
 def show_all_plants():
@@ -61,7 +62,7 @@ def add_new_plant():
     try:
         interval = int(input("📅 Enter watering interval (in days): "))
         today = datetime.now().strftime("%Y-%m-%d")
-        new_entry = pd.DataFrame([[name, today, interval]], columns=data.columns)
+        new_entry = pd.DataFrame([[name, today, interval, ""]], columns=data.columns)
         updated = pd.concat([data, new_entry], ignore_index=True)
         updated.to_csv("plants.csv", index=False)
         print(f"🌼 Successfully added {name} to your garden! 💚")
@@ -77,6 +78,22 @@ def show_next_due():
         print(f"🌺 {row['plant_name']} → Next watering due on {next_due}")
     print("\n-------------------------------------------------------------\n")
 
+def add_growth_notes():
+    print("\n📝 Add Growth Notes for Your Plants")
+    print("🌱 Available plants:", ", ".join(data['plant_name']))
+    plant_input = input("💧 Enter the plant name: ").capitalize()
+    if plant_input in list(data['plant_name']):
+        note = input("✍️ Enter your growth note: ")
+        if pd.isna(data.loc[data['plant_name'] == plant_input, 'notes']).all():
+            data.loc[data['plant_name'] == plant_input, 'notes'] = note
+        else:
+            data.loc[data['plant_name'] == plant_input, 'notes'] += " | " + note
+        data.to_csv("plants.csv", index=False)
+        print(f"✅ Note added for {plant_input} successfully!\n")
+    else:
+        print(f"⚠️ Plant '{plant_input}' not found!")
+    print("-------------------------------------------------------------\n")
+
 # 🌿 Main interactive loop
 while True:
     print("🌻 What would you like to do?")
@@ -85,9 +102,10 @@ while True:
     print("3️⃣  🌱 Add a new plant")
     print("4️⃣  📊 View all plants")
     print("5️⃣  📆 See next watering dates")
-    print("6️⃣  🚪 Exit\n")
+    print("6️⃣  📝 Add growth notes")
+    print("7️⃣  🚪 Exit\n")
 
-    choice = input("👉 Enter your choice (1-6): ").strip()
+    choice = input("👉 Enter your choice (1-7): ").strip()
 
     if choice == "1":
         check_reminders()
@@ -100,9 +118,13 @@ while True:
     elif choice == "5":
         show_next_due()
     elif choice == "6":
+        add_growth_notes()
+    elif choice == "7":
         print("\n👋 Goodbye, Plant Parent! 🌼")
         print("💧 Keep nurturing your green friends with love. 🌿✨")
         print("-------------------------------------------------------------\n")
         break
     else:
         print("⚠️ Oops! Invalid choice. Try again please.\n")
+
+       
