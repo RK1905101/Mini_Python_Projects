@@ -142,4 +142,4 @@ The Object is Rock
 
 ---
 
-Would you like me to **format this README with Markdown badges and emojis (for GitHub aesthetics)** too?
+
