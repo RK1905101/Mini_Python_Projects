@@ -1,0 +1,10 @@
+langchain
+langgraph
+langchain-google-genai
+streamlit
+numpy
+scipy
+scikit-learn
+requests
+python-dotenv
+pydantic
