@@ -1,6 +1,0 @@
-beautifulsoup4 4.14.2
-requests 2.32.5
-
-Both can be installed using pip:
-pip install beautifulsoup4
-pip install requests
