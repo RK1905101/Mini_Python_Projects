@@ -9,11 +9,9 @@ A comprehensive Python-based application to track, analyze, and visualize househ
 ## 📋 Table of Contents
 
 - [Features](#-features)
-- [Screenshots](#-screenshots)
 - [Installation](#-installation)
 - [Usage](#-usage)
 - [Project Structure](#-project-structure)
-- [Configuration](#-configuration)
 - [Examples](#-examples)
 - [Contributing](#-contributing)
 - [License](#-license)
@@ -142,12 +140,10 @@ energy-tracker/
 ├── README.md              # Documentation
 │
 ├── data/                  # Data storage directory
-│   ├── energy_data.json   # Usage data (auto-generated)
-│   ├── energy_report.png  # Generated charts
-│   ├── appliance_report.png
-│   └── hourly_report.png
-│
-└── .gitignore            # Git ignore file
+    ├── energy_data.json   # Usage data (auto-generated)
+    ├── energy_report.png  # Generated charts
+    ├── appliance_report.png
+    └── hourly_report.png
 ```
 
 ## ⚙️ Configuration
