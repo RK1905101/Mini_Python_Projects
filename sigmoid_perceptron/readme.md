@@ -68,4 +68,5 @@ Try other activation functions like ReLU or tanh
 Author
 
 Shirsha Nag 
+
 Data Science and Quantum Computing Enthusiast
