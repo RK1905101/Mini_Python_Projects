@@ -1,0 +1,4 @@
+2025-10-17 00:24:54,701 - INFO - Starting scrape for query: AI in healthcare
+2025-10-17 00:24:54,701 - INFO - Fetching results for query: AI in healthcare
+2025-10-17 00:24:55,289 - INFO - Fetched 10 results for query: AI in healthcare
+2025-10-17 00:24:55,289 - INFO - Saved results to ./data/AI in healthcare.csv
