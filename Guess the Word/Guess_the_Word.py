@@ -8,7 +8,6 @@ WORDS = [
     "terminal", "instance", "software", "hardware", "internet"
 ]
 MAX_ATTEMPTS = 6
-# ---------------------
 
 def choose_word(word_list):
     """Randomly selects a word from the provided list."""
@@ -28,7 +27,6 @@ def display_game_state(word, guessed_letters):
     return ' '.join(displayed_word)
 
 def play_game():
-    """Main function to run the Guess the Word game."""
     print("--- Welcome to GUESS THE WORD! ---")
     print(f"You have {MAX_ATTEMPTS} incorrect guesses before the game ends.")
     print("Let's begin!")
@@ -37,26 +35,23 @@ def play_game():
     guessed_letters = set()
     incorrect_guesses = 0
     
-    # Track letters already tried (both correct and incorrect)
     all_tried_letters = set() 
 
     while incorrect_guesses < MAX_ATTEMPTS:
         current_display = display_game_state(secret_word, guessed_letters)
         
-        # 1. Display current game info
         print("\n" + "="*40)
         print(f"Word: {current_display}")
         print(f"Attempts Remaining: {MAX_ATTEMPTS - incorrect_guesses}")
         print(f"Letters Guessed: {sorted(list(all_tried_letters))}")
         print("="*40)
 
-        # 2. Check for Win condition
-        # If the displayed word contains no underscores, the word is guessed.
+        #  Check for Win condition
         if '_' not in current_display:
             print(f"\n🥳 Congratulations! You guessed the word: {secret_word} 🥳")
             return
 
-        # 3. Get user input
+        # Get user input
         while True:
             try:
                 guess = input("Guess a letter: ").strip().upper()
@@ -69,16 +64,14 @@ def play_game():
                     print(f"💡 You already tried the letter '{guess}'. Try a new one!")
                     continue
                 
-                # Input is valid and new, break the input loop
                 break
             except EOFError:
                 print("\nGame session ended. Goodbye!")
                 return
         
-        # Add the new guess to the set of all tried letters
         all_tried_letters.add(guess)
 
-        # 4. Process the guess
+        #  Process the guess
         if guess in secret_word:
             print(f"✅ Great guess! The letter '{guess}' is in the word.")
             guessed_letters.add(guess)
@@ -86,7 +79,6 @@ def play_game():
             print(f"❌ Oops! The letter '{guess}' is NOT in the word.")
             incorrect_guesses += 1
     
-    # 5. Check for Loss condition (Loop ended because attempts ran out)
     print("\n" + "#"*40)
     print("GAME OVER! You ran out of attempts.")
     print(f"The secret word was: {secret_word}")
