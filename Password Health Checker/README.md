@@ -14,7 +14,7 @@ A simple Python tool that checks how secure a user's password is by:
 pip install requests
 
 
-## 🖼️ Screenshot
+## Screenshot
 
 Here’s what the app looks like when running in the terminal:
 
