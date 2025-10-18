@@ -1,0 +1,44 @@
+{
+    "plants": [
+        {
+            "name": "Marigold ",
+            "watering_interval_days": 2,
+            "last_watered": "2025-10-18",
+            "notes": []
+        },
+        {
+            "name": "Lily",
+            "watering_interval_days": 3,
+            "last_watered": "2025-10-18",
+            "notes": [
+                {
+                    "note": "Water added successfully.",
+                    "date": "2025-10-18"
+                }
+            ]
+        },
+        {
+            "name": "Rose",
+            "watering_interval_days": 2,
+            "last_watered": "2025-10-18",
+            "notes": [
+                {
+                    "note": "water added successfully.",
+                    "date": "2025-10-18"
+                }
+            ]
+        },
+        {
+            "name": "Marigold",
+            "watering_interval_days": 2,
+            "last_watered": "2025-10-18",
+            "notes": []
+        },
+        {
+            "name": "Sunflower",
+            "watering_interval_days": 1,
+            "last_watered": "2025-10-18",
+            "notes": []
+        }
+    ]
+}
