@@ -92,10 +92,8 @@ def main():
     logger.info("Company scraping process completed successfully.")
 
 if __name__ == "__main__":
-    # import os
-    # os.makedirs("log", exist_ok=True)
-    # os.makedirs("data", exist_ok=True)
-    # main()
-    cps = Companies([])
-    existing_companies = cps.get_companies_from_json(JSON_FILE)
-    existing_companies.save_companies_to_sqlite(DB_FILE)
+    import os
+    os.makedirs("log", exist_ok=True)
+    os.makedirs("data", exist_ok=True)
+    main()
+
