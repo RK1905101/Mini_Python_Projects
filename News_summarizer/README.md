@@ -14,7 +14,7 @@ A simple Python script that fetches the latest news from free public Really Simp
 ---
 
 ##  Requirements
-- Python 3.7+
+- Python 3.7+x
 - Libraries:
   - `feedparser`
 
