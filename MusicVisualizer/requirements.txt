@@ -1,5 +1,0 @@
-numpy
-PySide6
-pyqtgraph
-sounddevice
-soundfile
