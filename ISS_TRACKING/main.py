@@ -62,11 +62,11 @@ def sendmail():
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()  # Secure the connection with TLS
         # Login using app password (not normal password)
-        connection.login("parijpatel07@gmail.com", "idbw dvsq herb vdyh")
+        connection.login("abc@gmail.com", "idbw herb vdyh")
         # Send the email
         connection.sendmail(
-            from_addr="parijpatel07@gmail.com",
-            to_addrs="24cp041@bvmengineering.ac.in",
+            from_addr="abc@gmail.com",
+            to_addrs="xyz@gmail.com",
             msg="Subject: Look Up 👆\n\nThe ISS is currently overhead! Go outside and look up!",
         )
 
