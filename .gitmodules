@@ -1,3 +1,6 @@
 [submodule "Inventory Management Project"]
 	path = Inventory Management Project
 	url = https://github.com/DarshanCode2005/Inventory-management-system.git
+[submodule "Fullstack Telco Churn Prediction"]
+	path = Fullstack Telco Churn Prediction
+	url = https://github.com/DarshanCode2005/Fullstack-ML-Churn-Prediction-Project.git
