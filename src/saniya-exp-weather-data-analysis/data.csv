@@ -1,0 +1,31 @@
+Month,Year,Location,Temperature,Rainfall
+Jan,2025,New York,2.5,78
+Feb,2025,New York,3.0,65
+Mar,2025,New York,8.5,70
+Jan,2025,Los Angeles,15.0,50
+Feb,2025,Los Angeles,16.0,40
+Mar,2025,Los Angeles,17.5,30
+Jan,2025,London,5.0,60
+Feb,2025,London,6.0,55
+Mar,2025,London,10.0,50
+Jan,2025,Paris,4.0,52
+Feb,2025,Paris,5.5,48
+Mar,2025,Paris,9.0,50
+Jan,2025,Berlin,0.0,40
+Feb,2025,Berlin,1.0,35
+Mar,2025,Berlin,5.0,45
+Jan,2025,Mumbai,25.0,10
+Feb,2025,Mumbai,26.0,8
+Mar,2025,Mumbai,28.0,12
+Jan,2025,Tokyo,3.0,50
+Feb,2025,Tokyo,5.0,55
+Mar,2025,Tokyo,9.0,60
+Jan,2025,Sydney,25.0,30
+Feb,2025,Sydney,26.5,25
+Mar,2025,Sydney,22.0,20
+Jan,2025,Dubai,20.0,5
+Feb,2025,Dubai,22.0,2
+Mar,2025,Dubai,25.0,0
+Jan,2025,Cape Town,18.0,40
+Feb,2025,Cape Town,19.0,35
+Mar,2025,Cape Town,20.0,30

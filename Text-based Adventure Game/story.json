@@ -1,0 +1,178 @@
+{
+  "start": {
+    "title": "Awakening",
+    "text": "You wake up inside a damp chamber of an ancient dungeon. Your head aches.\nA flicker of torchlight comes from a corridor to the north. On the floor lies a frayed map and a rusty dagger.",
+    "choices": [
+      {"key":"1","text":"Pick up dagger and map, head north","target":"corridor","effects":{"items":["dagger","map"]}},
+      {"key":"2","text":"Leave them and carefully sneak north","target":"corridor_sneak","effects":{}}
+    ]
+  },
+
+  "corridor": {
+    "title":"Long Corridor",
+    "text":"The corridor splits in two. Left is dark and narrow; right is brighter and echoes with distant water.\nA shadow moves ahead.",
+    "choices":[
+      {"key":"L","text":"Take the left passage (dark)","target":"left_door"},
+      {"key":"R","text":"Take the right passage (bright)","target":"right_pool"},
+      {"key":"B","text":"Look closer at the map","target":"read_map","requirements":{"items":["map"]}}
+    ]
+  },
+
+  "corridor_sneak": {
+    "title":"Careful Steps",
+    "text":"You move silently but stumble on loose stones — a trap clicks!\nA dart grazes your arm.",
+    "choices":[
+      {"key":"C","text":"Press onward despite the pain","target":"corridor","effects":{"health":-5}},
+      {"key":"R","text":"Retreat and pick up the dagger and map","target":"corridor","effects":{"items":["dagger","map"]}}
+    ]
+  },
+
+  "read_map": {
+    "title":"The Map",
+    "text":"The map shows a secret passage behind the right pool and marks a locked gate with a key symbol near the central chamber.",
+    "choices":[
+      {"key":"1","text":"Head to the right pool","target":"right_pool"},
+      {"key":"2","text":"Go left into the dark door","target":"left_door"}
+    ]
+  },
+
+  "left_door": {
+    "title":"Left Door: The Armory",
+    "text":"You enter a low room filled with broken armor and a chest. A Warden statue watches you from the corner.",
+    "choices":[
+      {"key":"O","text":"Open the chest","target":"chest","effects":{}},
+      {"key":"S","text":"Smash the statue (risky)","target":"smash_statue","requirements":{},"effects":{}},
+      {"key":"B","text":"Return to corridor","target":"corridor"}
+    ]
+  },
+
+  "chest": {
+    "title":"Old Chest",
+    "text":"The chest creaks open. Inside: a rusty key and a small potion.",
+    "choices":[
+      {"key":"T","text":"Take items","target":"left_door","effects":{"items":["rusty_key","potion"]}},
+      {"key":"L","text":"Leave them and go back","target":"left_door"}
+    ]
+  },
+
+  "smash_statue": {
+    "title":"Awakening the Warden",
+    "text":"As you strike the statue it shudders to life — the Armory Warden attacks!",
+    "choices":[
+      {"key":"F","text":"Fight!","target":"combat_warden"},
+      {"key":"R","text":"Run back to corridor","target":"corridor"}
+    ]
+  },
+
+  "right_pool": {
+    "title":"The Pool",
+    "text":"A pool of cold water reflects the ceiling. Something glitters under the water.",
+    "choices":[
+      {"key":"D","text":"Dive for the glitter","target":"dive_pool"},
+      {"key":"S","text":"Search around the pool","target":"search_pool"},
+      {"key":"B","text":"Return to corridor","target":"corridor"}
+    ]
+  },
+
+  "dive_pool": {
+    "title":"Underwater","text":"You plunge beneath the surface. A small iron key is snagged on a beam, but something brushes your leg...",
+    "choices":[
+      {"key":"G","text":"Grab the key and surface quickly","target":"surface","effects":{"items":["iron_key"]}},
+      {"key":"F","text":"Fight whatever brushes you underwater","target":"combat_eel"}
+    ]
+  },
+
+  "search_pool": {
+    "title":"Poolside",
+    "text":"You find a loose tile. Behind it: a faded inscription and a hidden latch.",
+    "choices":[
+      {"key":"O","text":"Open the latch (secret passage)","target":"secret_passage"},
+      {"key":"B","text":"Go back to corridor","target":"corridor"}
+    ]
+  },
+
+  "secret_passage": {
+    "title":"Secret Passage",
+    "text":"The passage is narrow and leads to a room that smells of old smoke. A heavy gate bars the way to the central chamber.",
+    "choices":[
+      {"key":"K","text":"Try to unlock the heavy gate","target":"locked_gate","requirements":{"items":["rusty_key","iron_key"]}},
+      {"key":"P","text":"Search the room for clues","target":"search_room"},
+      {"key":"R","text":"Return to the pool","target":"right_pool"}
+    ]
+  },
+
+  "search_room": {
+    "title":"Search the Room",
+    "text":"You find charcoal sketches of a ritual and a note: 'The Warden keeps the throne — defeat him to end the curse.'",
+    "choices":[
+      {"key":"T","text":"Head to the central chamber through the gate (try to find another way)","target":"around_gate"},
+      {"key":"R","text":"Return to corridor","target":"corridor"}
+    ]
+  },
+
+  "locked_gate": {
+    "title":"The Locked Gate",
+    "text":"You turn the keys — the gears grind and the gate opens to the central chamber where an imposing throne sits. A skeletal Warden rises.",
+    "choices":[
+      {"key":"F","text":"Confront the skeletal Warden","target":"final_combat"},
+      {"key":"H","text":"Hide and observe","target":"observe_warden"}
+    ]
+  },
+
+  "around_gate": {
+    "title":"Around the Gate",
+    "text":"You find a narrow crawlspace that leads behind the chamber — it might give a tactical advantage.",
+    "choices":[
+      {"key":"C","text":"Crawl around to flank the Warden","target":"final_ambush"},
+      {"key":"R","text":"Return and try the keys again","target":"locked_gate"}
+    ]
+  },
+
+  "observe_warden": {
+    "title":"Observing",
+    "text":"You see that the Warden regenerates when near the throne. The rune on its back matches a symbol on your map.",
+    "choices":[
+      {"key":"A","text":"Attempt to disable the rune (requires potion)","target":"disable_rune","requirements":{"items":["potion"]}},
+      {"key":"F","text":"Charge in to fight now","target":"final_combat"}
+    ]
+  },
+
+  "disable_rune": {
+    "title":"Disabling Ritual",
+    "text":"You use the potion to mask the rune's energy. The Warden weakens!",
+    "choices":[
+      {"key":"F","text":"Fight the weakened Warden","target":"final_combat","effects":{"warden_debuff":true}},
+      {"key":"R","text":"Retreat to plan","target":"around_gate"}
+    ]
+  },
+
+  "final_ambush": {
+    "title":"Ambush",
+    "text":"From behind the throne you strike the Warden off-guard. The battle begins!",
+    "choices":[
+      {"key":"F","text":"Fight!","target":"final_combat"}
+    ]
+  },
+
+  "final_combat": {
+    "title":"Final Confrontation",
+    "text":"The skeletal Warden towers over you, armor clanking. This battle decides whether you leave as free or as a husk of bone.",
+    "choices":[
+      {"key":"F","text":"Engage in combat","target":"ending_outcome"}
+    ]
+  },
+
+  "ending_outcome": {
+    "title":"Outcome",
+    "text":"(RESOLVED BY COMBAT) The outcome depends on how the combat went and what choices you made. There are multiple possible endings: triumph, bittersweet escape, or tragic demise.",
+    "choices":[
+      {"key":"R","text":"Return to start (play again)","target":"start"}
+    ]
+  },
+
+  "combat_warden": {"title":"Warden Combat Intro","text":"Prepare to fight the Armory Warden","choices":[{"key":"F","text":"Fight","target":"combat_warden_fight"}]},
+  "combat_warden_fight": {"title":"Warden Fight Node","text":"(Combat node — resolved by combat system)","choices":[{"key":"C","text":"Continue","target":"left_door"}]},
+
+  "combat_eel": {"title":"Eel Fight Intro","text":"A cave eel lashes at you!","choices":[{"key":"F","text":"Fight","target":"combat_eel_fight"}]},
+  "combat_eel_fight": {"title":"Eel Fight Node","text":"(Combat node — resolved by combat system)","choices":[{"key":"C","text":"Continue","target":"right_pool"}]}
+}

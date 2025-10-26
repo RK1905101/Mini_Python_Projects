@@ -1,0 +1,43 @@
+# Python byte-code and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Cache/build in src
+src/__pycache__/
+src/*.pyc
+
+# Logs
+log/
+
+# Data
+data/
+
+
+# Project / IDE files
+*.iml
+.vscode/
+.idea/
+
+# Common misc files
+*.txt
+*.json
+*.db
+*.xml
+*.sqlite3
+
+# Virtual environments
+venv/
+.env/
+env/
+.venv/
+
+# Build / distribution artifacts
+build/
+dist/
+*.egg-info/
+
+# Specific files
+

@@ -1,0 +1,9 @@
+langchain_community
+langchain_huggingface
+langchain_groq
+langchain_core
+dotenv
+faiss-cpu
+datasets
+streamlit
+sentence_transformers
