@@ -1,0 +1,3 @@
+[submodule "AI Powered Commit Generator"]
+	path = AI Powered Commit Generator
+	url = https://github.com/DarshanCode2005/AI-Powered-Commit-Message-Generator.git
