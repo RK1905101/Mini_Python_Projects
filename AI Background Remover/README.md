@@ -32,15 +32,15 @@ Users can upload any image, preview it, and download the background-removed outp
 ```bash
 https://github.com/RK1905101/Mini_Python_Projects
 cd AI-Background-Remover
-2️⃣ Create & Activate Virtual Environment (Recommended)
 
+2️⃣ Create & Activate Virtual Environment (Recommended)
 conda create -n bgremove python=3.9 -y
 conda activate bgremove
 or using venv ⬇️
 
-
 python -m venv venv
 venv\Scripts\activate  # Windows
+
 3️⃣ Install Required Packages
 pip install -r requirements.txt
 
@@ -61,12 +61,12 @@ AI-Background-Remover/
 │
 ├── requirements.txt         # Dependencies
 ├── README.md                # Project Documentation
-└── assets/                  # Demo images (optional)
+└── assets/                 
+ # Demo images 
 📸 Screenshots
-Original	Background Removed
+<img width="1024" height="1024" alt="bgremover" src="https://github.com/user-attachments/assets/3a095fd2-db7f-4882-980d-bd98f9fc3780" />
+<img width="1024" height="1024" alt="output2" src="https://github.com/user-attachments/assets/c71f9643-8b86-4a05-8d1c-c2d7580c88c5" />
 
 
-📜 License
-This project is for educational and personal use. Please refer to the license file for more details.
 
 
