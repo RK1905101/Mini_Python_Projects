@@ -1,0 +1,12 @@
+# Requirements for AI Background Remover
+# Core packages
+rembg>=2.0.0
+streamlit>=1.0
+Pillow>=9.0
+
+# Recommended runtime for performance (optional)
+onnxruntime>=1.15.0  # replace with onnxruntime-gpu for GPU support
+
+# Notes:
+# - On Windows you may need Microsoft Visual C++ Build Tools for some packages.
+# - If you want GPU acceleration, install `onnxruntime-gpu` instead of `onnxruntime`.
