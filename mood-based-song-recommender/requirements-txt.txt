@@ -1,0 +1,80 @@
+# ============================================
+# AI Mood-Based Music Recommender
+# Requirements for All Versions
+# ============================================
+
+# --------------------------------------------
+# BASIC VERSION (Level 1) - Minimum Required
+# --------------------------------------------
+
+# Natural Language Processing
+textblob==0.17.1
+
+# --------------------------------------------
+# INTERMEDIATE VERSION (Level 2) - Add These
+# --------------------------------------------
+
+# Spotify API Integration
+spotipy==2.23.0
+
+# Required by spotipy for HTTP requests
+requests==2.31.0
+urllib3==2.0.7
+
+# --------------------------------------------
+# ADVANCED VERSION (Level 3) - Add These
+# --------------------------------------------
+
+# Async HTTP Client
+aiohttp==3.9.1
+
+# Enhanced Sentiment Analysis (Optional but recommended)
+vaderSentiment==3.3.2
+
+# Async support libraries
+asyncio==3.4.3
+aiosignal==1.3.1
+frozenlist==1.4.0
+multidict==6.0.4
+yarl==1.9.3
+
+# --------------------------------------------
+# DEVELOPMENT DEPENDENCIES (Optional)
+# --------------------------------------------
+
+# Code Quality Tools
+# pylint==3.0.3
+# black==23.12.1
+# flake8==7.0.0
+
+# Testing
+# pytest==7.4.3
+# pytest-asyncio==0.21.1
+# pytest-cov==4.1.0
+
+# Type Checking
+# mypy==1.7.1
+
+# --------------------------------------------
+# NOTES
+# --------------------------------------------
+
+# Installation by Level:
+# 
+# Basic Version:
+#   pip install textblob
+#   python -m textblob.download_corpora
+#
+# Intermediate Version:
+#   pip install textblob spotipy requests
+#   python -m textblob.download_corpora
+#
+# Advanced Version:
+#   pip install -r requirements.txt
+#   python -m textblob.download_corpora
+#
+# Install All (Recommended):
+#   pip install -r requirements.txt
+#   python -m textblob.download_corpora
+
+# Python Version: 3.8+

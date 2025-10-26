@@ -1,0 +1,81 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #1f1f1f;
+  --card: #ffffff;
+  --border: #ddd;
+  --primary: #007bff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --card: #1e1e1e;
+    --border: #444;
+    --primary: #4e9eff;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  width: 320px;
+}
+
+.container {
+  padding: 16px;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  color: var(--text);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#loading {
+  text-align: center;
+  display: none;
+  margin-top: 10px;
+}
+
+#loading img {
+  width: 24px;
+  height: 24px;
+}
+
+#answer {
+  margin-top: 12px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  white-space: pre-wrap;
+  min-height: 40px;
+}

@@ -1,0 +1,6 @@
+{
+  "SPOTIPY_CLIENT_ID": "your_spotify_client_id_here",
+  "SPOTIPY_CLIENT_SECRET": "your_spotify_client_secret_here",
+  "SPOTIPY_REDIRECT_URI": "http://127.0.0.1:8888/callback",
+  "SCOPE": "user-library-read playlist-read-private"
+}

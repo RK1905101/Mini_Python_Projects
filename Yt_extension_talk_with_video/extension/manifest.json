@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube AI Q&A",
+  "version": "1.0",
+  "description": "Ask questions about YouTube videos using AI",
+  "permissions": ["tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "host_permissions": ["<all_urls>"]
+}
