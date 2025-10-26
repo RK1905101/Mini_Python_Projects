@@ -1,1 +1,0 @@
-FLAMES! These six letters were highly popular among 90s kids. This funny game is played by almost every 90s kid in their school. A game to know their relationship with their crush. LOL

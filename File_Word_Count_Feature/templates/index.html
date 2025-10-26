@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Word Count</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📄 File Word Count Analyzer</h1>
+      <p class="subtitle">
+        Upload a text file to analyze word frequency and visualize results.
+      </p>
+
+      <form method="POST" enctype="multipart/form-data" class="form-box">
+        <div class="input-group">
+          <label for="file">Select File:</label>
+          <input type="file" id="file" name="file" required />
+        </div>
+
+        <div class="input-group">
+          <label for="top_n">Top N Words:</label>
+          <input type="number" id="top_n" name="top_n" value="10" min="1" />
+        </div>
+
+        <div class="input-group checkbox">
+          <input
+            type="checkbox"
+            id="ignore_stopwords"
+            name="ignore_stopwords"
+          />
+          <label for="ignore_stopwords">Ignore common stopwords</label>
+        </div>
+
+        <button type="submit" class="btn">🔍 Count Words</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>Developed with ❤️ using Flask</p>
+    </footer>
+  </body>
+</html>
