@@ -1,0 +1,19 @@
+body {
+  background: linear-gradient(135deg, #74abe2, #5563de);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.card {
+  background-color: #fff;
+  max-width: 400px;
+  width: 100%;
+}
+
+.result {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Validator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container text-center mt-5">
+      <div class="card p-5 shadow-lg rounded-4">
+        <h2 class="mb-4">📧 Advanced Email Validator</h2>
+        <form method="POST">
+          <input
+            type="text"
+            name="email"
+            class="form-control mb-3"
+            placeholder="Enter email address"
+            required
+          />
+          <button type="submit" class="btn btn-primary w-100">Validate</button>
+        </form>
+        {% if result %}
+        <div class="mt-4 result {{ color }}">
+          <strong>{{ result }}</strong>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
