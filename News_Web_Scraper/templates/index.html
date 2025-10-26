@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>News Scraper</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">NewsScraper</a>
+        <form class="d-flex flex-column flex-md-row" method="POST">
+          <input
+            class="form-control me-2 mb-2 mb-md-0"
+            type="url"
+            name="url"
+            placeholder="Enter news website URL"
+            value="{{ url }}"
+            required
+          />
+          <input
+            class="form-control me-2 mb-2 mb-md-0"
+            type="text"
+            name="keyword"
+            placeholder="Search keyword"
+            value="{{ keyword }}"
+          />
+          <button class="btn btn-light" type="submit">Scrape</button>
+        </form>
+
+        <button class="btn btn-warning ms-2" id="exportBtn">Export CSV</button>
+      </div>
+    </nav>
+
+    <div class="container my-4">
+      <div class="row" id="newsContainer">
+        {% for article in news %}
+        <div class="col-md-6 mb-3">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">{{ article.headline }}</h5>
+              <p class="text-muted">{{ article.date }}</p>
+              <p class="card-text collapse" id="content{{ loop.index }}">
+                {{ article.content }}
+              </p>
+              <a
+                href="{{ article.link }}"
+                target="_blank"
+                class="btn btn-sm btn-primary"
+                >Read More</a
+              >
+              <button
+                class="btn btn-sm btn-secondary"
+                data-bs-toggle="collapse"
+                data-bs-target="#content{{ loop.index }}"
+              >
+                Toggle Content
+              </button>
+            </div>
+          </div>
+        </div>
+        {% else %}
+        <p>No articles found.</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
