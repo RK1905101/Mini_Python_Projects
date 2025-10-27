@@ -1,0 +1,6 @@
+- You need 
+1. openCV
+2. Tensor flow
+3. numpy
+4. webcam
+ 
