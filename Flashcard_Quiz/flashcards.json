@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is the time complexity of binary search?",
+    "answer": "O(log n)"
+  },
+  {
+    "question": "Which CSS property creates a gradient?",
+    "answer": "background-image"
+  },
+  {
+    "question": "What does HTML stand for?",
+    "answer": "HyperText Markup Language"
+  }
+]
