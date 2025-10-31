@@ -1,0 +1,8 @@
+__pycache__
+*.png
+
+# Virtual environment
+venv/
+
+# VS Code workspace settings
+.vscode/
